@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["testing-library"],
+  "rules": {
+    "import/no-default-export": "error"
+  },
+  "overrides": [
+    // Enable default export for pages and api endpoints
+    {
+      "files": ["./src/pages/*.ts?(x)"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    },
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ]
+}
