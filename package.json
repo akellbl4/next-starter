@@ -1,42 +1,45 @@
 {
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"serve": "run-s build start",
-		"test:units": "jest",
-		"test:cy:run": "cypress run",
-		"test:cy:open": "cypress open",
-		"test:e2e:run": "start-server-and-test serve http://localhost:3000 test:cy:run",
-		"test:e2e:open": "start-server-and-test dev http://localhost:3000 test:cy:open",
-		"test:e2e:open-prod": "start-server-and-test serve http://localhost:3000 test:cy:open",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"next": "latest",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
-	},
-	"devDependencies": {
-		"@testing-library/cypress": "^8.0.2",
-		"@testing-library/jest-dom": "^5.16.1",
-		"@testing-library/react": "^12.1.2",
-		"@types/react": "^17.0.38",
-		"autoprefixer": "^10.4.0",
-		"cypress": "^9.2.0",
-		"eslint": "8.5.0",
-		"eslint-config-next": "12.0.7",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-import": "^2.25.3",
-		"eslint-plugin-testing-library": "^5.0.1",
-		"jest": "^27.4.5",
-		"jest-extended": "^1.2.0",
-		"npm-run-all": "^4.1.5",
-		"postcss": "^8.4.4",
-		"prettier": "^2.5.1",
-		"start-server-and-test": "^1.14.0",
-		"tailwindcss": "^3.0.0",
-		"typescript": "^4.5.4"
-	}
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "serve": "run-s build start",
+    "lint": "next lint",
+    "test:units": "jest",
+    "test:cy:run": "cypress run",
+    "test:cy:open": "cypress open",
+    "test:e2e:run": "start-server-and-test serve http://localhost:3000 test:cy:run",
+    "test:e2e:open": "start-server-and-test dev http://localhost:3000 test:cy:open",
+    "test:e2e:open-prod": "start-server-and-test serve http://localhost:3000 test:cy:open",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/react": "^17.0.38",
+    "autoprefixer": "^10.4.0",
+    "cypress": "^9.2.0",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-testing-library": "^5.0.1",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "jest-extended": "^1.2.0",
+    "lint-staged": "^12.1.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.4",
+    "prettier": "^2.5.1",
+    "start-server-and-test": "^1.14.0",
+    "tailwindcss": "^3.0.0",
+    "typescript": "^4.5.4"
+  }
 }
